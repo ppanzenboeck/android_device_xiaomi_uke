@@ -14,14 +14,19 @@ $(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/xiaomi/uke/device.mk)
 
-PRODUCT_DEVICE := uke
-PRODUCT_BRAND := Xiaomi
 PRODUCT_NAME := lineage_uke
-PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := 2410CRP4CG
-
-PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+PRODUCT_DEVICE := uke
+PRODUCT_MODEL := Xiaomi Pad 7
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="missi-user 16 BP2A.250605.031.A3 OS3.0.301.0.WOZMIXM release-keys" \
-    BuildFingerprint=Xiaomi/uke_global/uke:16/BP2A.250605.031.A3/OS3.0.301.0.WOZMIXM:user/release-keys
+    BuildDesc="tangorpro-user 16 BP4A.260105.004.E1 14587043 release-keys" \
+    BuildFingerprint=google/tangorpro/tangorpro:16/BP4A.260105.004.E1/14587043:user/release-keys \
+    DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    setupwizard.feature.show_pai_screen_in_main_flow=false \
+    ro.setupwizard.suppress_pai=true \
+    ro.com.google.clientidbase=android-google \
+    ro.com.google.clientidbase.am=android-google \
+    ro.com.google.clientidbase.ms=android-google
