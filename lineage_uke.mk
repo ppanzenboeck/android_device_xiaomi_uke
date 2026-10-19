@@ -18,10 +18,20 @@ PRODUCT_DEVICE := uke
 PRODUCT_BRAND := Xiaomi
 PRODUCT_NAME := lineage_uke
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_MODEL := Pad 7
+PRODUCT_MODEL := Xiaomi Pad 7
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="missi-user 16 BP2A.250605.031.A3 OS3.0.304.0.WOZMIXM release-keys"
+    BuildDesc="tangorpro-user 16 BP4A.260105.004.E1 14587043 release-keys" \
+    BuildFingerprint=google/tangorpro/tangorpro:16/BP4A.260105.004.E1/14587043:user/release-keys \
+    DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME)
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    setupwizard.feature.show_pai_screen_in_main_flow=false \
+    ro.setupwizard.suppress_pai=true \
+    ro.com.google.clientidbase=android-google \
+    ro.com.google.clientidbase.am=android-google \
+    ro.com.google.clientidbase.ms=android-google
 
 # Axion Device Configuration
 AXION_MAINTAINER := delano-git
