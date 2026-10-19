@@ -10,6 +10,10 @@ KERNEL_PATH := $(DEVICE_PATH)-kernel
 # Dolby
 TARGET_PROVIDES_DOLBY_DAX := true
 
+# Boot animation resolution
+TARGET_SCREEN_HEIGHT := 3200
+TARGET_SCREEN_WIDTH := 2136
+
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/xiaomi/sm8635-common/common.mk)
 
